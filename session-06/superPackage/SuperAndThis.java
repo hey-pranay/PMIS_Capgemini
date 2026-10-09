@@ -49,3 +49,48 @@ class SavingAc extends BankAccount {
         System.out.println("Interest rate : " + interstRate);
     }
 }
+
+class Animal {
+    String name;
+
+    void eat() {
+        System.out.println("Animal eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+class Employee {
+    String name;
+    double salary;
+
+    Employee(String name, double salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+
+    void displayDetails() {
+        System.out.println("Employee Name : " + name);
+        System.out.println("Employee Salary : " + salary);
+    }
+}
+
+class Manager_2 extends Employee {
+    String deparatment;
+
+    Manager_2(String name, double salaray, String department) {
+        super(name, salaray);
+        this.deparatment = department;
+    }
+
+    @Override
+    void displayDetails() {
+        super.displayDetails();
+        System.out.println("Department : " + deparatment);
+        System.out.println("Role : Manager ");
+    }
+}
