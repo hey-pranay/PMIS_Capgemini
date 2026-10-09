@@ -1,3 +1,26 @@
+
+/*
+Problem Statement
+You are given an array of integers. Your task is to find the second-largest distinct element in the array.
+The second-largest element must be strictly smaller than the largest element. Repeated occurrences of
+the largest number must not be considered the second-largest element.
+If the array does not contain at least two distinct elements, print Not Possible.
+Input Format
+The first line contains an integer N, representing the number of elements in the array.
+The second line contains N space-separated integers.
+Constraints
+• -10000 each array element 10000
+Output Format
+Print the second-largest distinct element. If no such element exists, print Not Possible.
+Sample Input
+6
+10 20 5 20 8 15
+Sample Output
+15
+Explanation
+The largest element is 20. The next-largest distinct element is 15, so the output is 15.
+*/
+
 package hackerrank_ques;
 
 import java.util.Scanner;
