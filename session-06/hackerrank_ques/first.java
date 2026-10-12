@@ -58,26 +58,6 @@ class Manager extends Employee {
     }
 }
 
-class Result {
-
-    /*
-     * Complete the 'calculateSalary' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts following parameters:
-     * 1. INTEGER basicSalary
-     * 2. INTEGER allowance
-     * 3. INTEGER deduction
-     */
-
-    // public static int calculateSalary(int basicSalary, int allowance, int
-    // deduction) {
-    // // Write your code here
-
-    // }
-
-}
-
 public class first {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
