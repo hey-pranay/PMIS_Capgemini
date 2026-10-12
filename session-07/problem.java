@@ -20,18 +20,9 @@ class UserAccount {
     private String username;
     private static int totalUsers = 0;
 
-    UserAccount() {
-    }
-
     UserAccount(String username) {
         this.username = username;
         totalUsers++;
-    }
-
-    UserAccount(String username, int totalUsers) {
-        this.username = username;
-        UserAccount.totalUsers = totalUsers;
-
     }
 
     String getUsername() {
@@ -54,9 +45,9 @@ public class problem {
         UserAccount ua2 = new UserAccount("Rahul");
         UserAccount ua3 = new UserAccount("Rakesh");
 
-        ua1.getUsername();
-        ua2.getUsername();
-        ua3.getUsername();
+        System.out.println(ua1.getUsername());
+        System.out.println(ua2.getUsername());
+        System.out.println(ua3.getUsername());
 
         System.out.println(UserAccount.getTotalUsers());
     }
