@@ -264,6 +264,7 @@ sorted()     -> Sort elements
 
 package lambdaExpression;
 
+import java.util.Random;
 import java.util.Scanner;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -312,6 +313,16 @@ public class Lambda {
         /* Supplier */
         Supplier<String> message = () -> "Welcome";
         System.out.println(message.get());
+
+        Supplier<String> otgen = () -> {
+            Random r = new Random();
+            int number = 180000 * r.nextInt(90000);
+            return String.valueOf(number);
+        };
+
+        String userOtp = otgen.get();
+        System.out.println(userOtp);
+        
 
     }
 
