@@ -17,9 +17,6 @@ import java.util.List;
  * 3. No need for explicit casts when reading typed values.
  * 4. Clearer, more readable code.
  *
- * Run:
- * javac Generics_Quick_Reference.java
- * java Generics_Quick_Reference
  */
 public class Generics_Quick_Reference {
 
@@ -81,6 +78,8 @@ public class Generics_Quick_Reference {
             count++;
         }
     }
+
+
 
     public static void main(String[] args) {
         System.out.println("1. Generic class:");
