@@ -26,6 +26,26 @@ public class StudentDAO {
         }
     }
 
+    // UPDATE: Change a student's details
+    public void updateStudent(int id, String name, int age)
+            throws SQLException {
+
+        String sql =
+                "UPDATE students SET name= ? ,age = ? " +
+                        "WHERE id = ?";
+
+        try (
+                Connection con = DBConnection.getConnection();
+                PreparedStatement ps = con.prepareStatement(sql)
+        ) {
+            ps.setString(1, name);
+            ps.setInt(2, age);
+            ps.setInt(3, id);
+
+            int rows = ps.executeUpdate();
+            System.out.println(rows + " student updated.");
+        }
+    }
 
     // READ: Find one student by ID
     public void findStudentById(int id) throws SQLException {
