@@ -4,6 +4,27 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class StudentDAO {
+        // Insert new student data
+        public void insertStudent() throws SQLException {
+
+        String sql = "INSERT INTO students (name, age, course) VALUES (?, ?, ?)";
+
+        try (
+                Connection con = DBConnection.getConnection();
+                PreparedStatement ps = con.prepareStatement(sql)
+        ) {
+            ps.setString(1, "Tanisha");
+            ps.setInt(2, 100);
+            ps.setString(3, "Maven");
+
+            int rowsInserted = ps.executeUpdate();
+
+            if (rowsInserted > 0) {
+                System.out.println("Student inserted successfully!");
+            }
+        }
+    }
+
 
     // READ: Display all students
     public void displayStudents() throws SQLException {

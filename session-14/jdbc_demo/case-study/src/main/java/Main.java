@@ -1,3 +1,4 @@
+
 import java.sql.SQLException;
 
 public class Main {
@@ -7,14 +8,17 @@ public class Main {
 
         try {
 
-            // get all
+            // Get all students
             dao.displayStudents();
 
-            // SEARCH
+            // Search student by ID
             dao.findStudentById(2);
 
-            //UPDATE
+            // Update student
             dao.updateStudent(7, "Taesha", 21);
+
+            // Insert student
+            dao.insertStudent();
 
         } catch (SQLException e) {
             System.err.println(
@@ -22,5 +26,4 @@ public class Main {
             );
         }
     }
-
 }
