@@ -13,8 +13,8 @@ public class Main {
             // SEARCH
             dao.findStudentById(2);
 
-            // UPDATE
-            dao.updateStudent(10, "Taesha", 21);
+            //UPDATE
+            dao.updateStudent(7, "Taesha", 21);
 
         } catch (SQLException e) {
             System.err.println(
