@@ -14,7 +14,7 @@ public class Main {
             dao.findStudentById(2);
 
             // UPDATE
-
+            dao.updateStudent(10, "Taesha", 21);
 
         } catch (SQLException e) {
             System.err.println(
