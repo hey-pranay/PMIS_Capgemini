@@ -18,9 +18,15 @@ public class Main {
             dao.updateStudent(7, "Taesha", 21);
 
             // Insert student
-            dao.insertStudent();
+            dao.insertStudent("AjayP", 23, "JDBC");
 
-        } catch (SQLException e) {
+            // Delete student by ID
+            dao.deleteStudent(7);
+
+        }catch (IllegalArgumentException e) {
+            System.out.println("Validation error: " + e.getMessage());
+
+        }catch (SQLException e) {
             System.err.println(
                     "Database operation failed: " + e.getMessage()
             );
