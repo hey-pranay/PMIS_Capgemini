@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 public class StudentDAO {
         // Insert new student data
-        public void insertStudent() throws SQLException {
+        public void insertStudent(String name, int age, String course) throws SQLException {
 
         String sql = "INSERT INTO students (name, age, course) VALUES (?, ?, ?)";
 
@@ -13,9 +13,9 @@ public class StudentDAO {
                 Connection con = DBConnection.getConnection();
                 PreparedStatement ps = con.prepareStatement(sql)
         ) {
-            ps.setString(1, "Tanisha");
-            ps.setInt(2, 100);
-            ps.setString(3, "Maven");
+            ps.setString(1, name);
+            ps.setInt(2, age);
+            ps.setString(3, course);
 
             int rowsInserted = ps.executeUpdate();
 
@@ -93,4 +93,37 @@ public class StudentDAO {
             }
         }
     }
+
+
+    // DELETE: Delete a student by ID
+    public boolean deleteStudent(int id) throws SQLException{
+
+            //Case1: Validate student ID
+        if(id <= 0){
+            throw new IllegalArgumentException("Student ID must be greater than zero.");
+        }
+
+        String sql = "DELETE FROM students WHERE id = ?";
+
+        try (
+                Connection con = DBConnection.getConnection();
+                PreparedStatement ps = con.prepareStatement(sql)
+        )
+        {
+            ps.setInt(1, id);
+
+            int rowsDeleted = ps.executeUpdate();
+
+            if(rowsDeleted > 0){
+                System.out.println(
+                        "Student with ID "+ id + " deleted successfully."
+                );
+                return true;
+            }else {
+                System.out.println("Student not found with ID: "+ id);
+            }
+            return false;
+        }
+    }
+
 }
