@@ -1,3 +1,4 @@
+
 import java.sql.SQLException;
 
 public class Main {
@@ -7,18 +8,28 @@ public class Main {
 
         try {
 
-            // get all
+            // Get all students
             dao.displayStudents();
 
-            // SEARCH
+            // Search student by ID
             dao.findStudentById(2);
 
+            // Update student
+            dao.updateStudent(7, "Taesha", 21);
 
-        } catch (SQLException e) {
+            // Insert student
+            dao.insertStudent("AjayP", 23, "JDBC");
+
+            // Delete student by ID
+            dao.deleteStudent(7);
+
+        }catch (IllegalArgumentException e) {
+            System.out.println("Validation error: " + e.getMessage());
+
+        }catch (SQLException e) {
             System.err.println(
                     "Database operation failed: " + e.getMessage()
             );
         }
     }
-
 }
