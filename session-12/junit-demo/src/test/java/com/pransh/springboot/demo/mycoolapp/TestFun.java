@@ -13,7 +13,7 @@ public class TestFun {
 
         int expected = 6;
 
-        int actual = funTest.add(2, 4);
+        int actual = funTest.add(2, 5);
 
         Assertions.assertEquals(expected, actual, "2+4 must be 6");
     }
