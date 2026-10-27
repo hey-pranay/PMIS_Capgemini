@@ -1,24 +1,24 @@
-/*
-Problem : Vehicle rental shop
+package vehicleRentalShop;/*
+Problem : vehicleRentalShop.Vehicle rental shop
 
 Build a rental shop for different kinds of vehicles.
 
-Create an interface Rentable with calculateRent(int days) and isAvailable().
-Create an abstract class Vehicle that implements it. Each vehicle has an id, model, daily rate and availability.
-Car costs rate × days.
-Bike costs rate × days, with a 10% discount for 7 or more days.
-Truck costs rate × days plus a fixed 500 insurance charge.
-A Customer keeps a history of their Rental objects. A Rental links a vehicle, a customer and a number of days.
-RentalShop stores the fleet. It supports rent(), which throws an exception if the vehicle is missing or already rented, as well as giveBack() and showAvailable().
+Create an interface vehicleRentalShop.Rentable with calculateRent(int days) and isAvailable().
+Create an abstract class vehicleRentalShop.Vehicle that implements it. Each vehicle has an id, model, daily rate and availability.
+vehicleRentalShop.Car costs rate × days.
+vehicleRentalShop.Bike costs rate × days, with a 10% discount for 7 or more days.
+vehicleRentalShop.Truck costs rate × days plus a fixed 500 insurance charge.
+A vehicleRentalShop.Customer keeps a history of their vehicleRentalShop.Rental objects. A vehicleRentalShop.Rental links a vehicle, a customer and a number of days.
+vehicleRentalShop.RentalShop stores the fleet. It supports rent(), which throws an exception if the vehicle is missing or already rented, as well as giveBack() and showAvailable().
 
 Expected OutPut:
 
-Asha rented Bike Activa (B1) for 8 days = 2880.00
-Ravi rented Truck Tata Ace (T1) for 2 days = 5500.00
-Error: Bike Activa (B1) is already rented
+Asha rented vehicleRentalShop.Bike Activa (B1) for 8 days = 2880.00
+Ravi rented vehicleRentalShop.Truck Tata Ace (T1) for 2 days = 5500.00
+Error: vehicleRentalShop.Bike Activa (B1) is already rented
 Available vehicles:
-  Car Swift (C1)
-  Bike Activa (B1)
+  vehicleRentalShop.Car Swift (C1)
+  vehicleRentalShop.Bike Activa (B1)
 
 */
 

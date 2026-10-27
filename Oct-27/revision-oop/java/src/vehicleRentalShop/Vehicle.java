@@ -1,6 +1,8 @@
+package vehicleRentalShop;
+
 abstract class Vehicle implements Rentable {
     //id, model, daily rate and availability.
-    //Car costs rate × days.
+    //vehicleRentalShop.Car costs rate × days.
     private String id;
     private String model;
     private double dailyRate;

@@ -1,3 +1,5 @@
+package vehicleRentalShop;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +14,7 @@ public class RentalShop {
             throws VehicleNotAvailableException {
         if (days <= 0) {
             throw new IllegalArgumentException(
-                    "Rental days must be greater than zero."
+                    "vehicleRentalShop.Rental days must be greater than zero."
             );
         }
 
@@ -63,7 +65,7 @@ public class RentalShop {
         }
 
         throw new VehicleNotAvailableException(
-                "Vehicle " + vehicleId + " not found."
+                "vehicleRentalShop.Vehicle " + vehicleId + " not found."
         );
 
     }

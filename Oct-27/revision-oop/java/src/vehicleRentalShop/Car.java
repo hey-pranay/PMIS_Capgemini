@@ -1,3 +1,5 @@
+package vehicleRentalShop;
+
 public class Car extends Vehicle{
 
     Car(String  id, String model, double dailyRent){

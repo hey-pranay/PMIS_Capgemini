@@ -1,3 +1,5 @@
+package vehicleRentalShop;
+
 public class Truck extends Vehicle {
 
     private static final double  INSURANCE_CHARGE = 500.0;

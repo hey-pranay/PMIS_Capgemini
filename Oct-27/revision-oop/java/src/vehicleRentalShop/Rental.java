@@ -1,3 +1,5 @@
+package vehicleRentalShop;
+
 public class Rental {
     private final Vehicle vehicle;
     private final Customer customer;
@@ -7,7 +9,7 @@ public class Rental {
     Rental(Vehicle vehicle, Customer customer, int days) {
         if (days <= 0) {
             throw new IllegalArgumentException(
-                    "Rental days must be greater than 0."
+                    "vehicleRentalShop.Rental days must be greater than 0."
             );
         }
 
