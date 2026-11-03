@@ -15,12 +15,6 @@ For the complete endpoint reference and ready-to-copy Postman request bodies, se
 
 ## Run
 
-Start the bundled MySQL database if desired:
-
-```bash
-docker compose up -d
-```
-
 Configure the MySQL URL, username, and password in `src/main/resources/application.properties`.
 Hibernate creates or updates the schema from the JPA entities. On an empty database, the
 `PlacementDataInitializer` loads the sample students, companies, and applications through Spring
